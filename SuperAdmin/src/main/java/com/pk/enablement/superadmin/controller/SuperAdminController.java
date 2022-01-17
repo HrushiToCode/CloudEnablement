@@ -6,25 +6,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.pk.enablement.superadmin.entity.Users;
 import com.pk.enablement.superadmin.model.UserDetails;
-import com.pk.enablement.superadmin.repository.UserRepository;
+import com.pk.enablement.superadmin.service.SuperAdminService;
 
 @RestController
 public class SuperAdminController {
 	
 	@Autowired
-	private UserRepository userRepository;
+	private SuperAdminService service;
 
 	@RequestMapping(path="/addUser", method=RequestMethod.POST, consumes="application/json")
 	public String addUser(@RequestBody UserDetails userDetails) {
-		Users user = new Users();
-		user.setEmail(userDetails.getEmail());
-		user.setName(userDetails.getName());
-		user.setPassword(userDetails.getPassword());
-		user.setUserType(userDetails.getUserType());
-		
-		userRepository.save(user);
-		return "User successfully added";
+		System.out.println(userDetails.getLastName());
+		System.out.println(userDetails.getRole());
+		return service.addUser(userDetails);
 	}
 }

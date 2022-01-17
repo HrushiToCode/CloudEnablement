@@ -1,4 +1,4 @@
-package com.pk.enablement.superadmin.entity;
+package com.pk.enablement.userlogin.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,15 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-
 @Entity
-@Getter
-@Builder
-@Table(name = "users_demo")
-@AllArgsConstructor   
+@Table(name="users_demo")
 public class Users {
 
 	@Id
@@ -37,6 +30,10 @@ public class Users {
 
 	public String getEmailAddress() {
 		return emailAddress;
+	}
+	
+	public Long getId() {
+		return id;
 	}
 
 	public void setEmailAddress(String emailAddress) {
@@ -91,4 +88,6 @@ public class Users {
 		this.lastName = lastName;
 	}
 	
+
+
 }

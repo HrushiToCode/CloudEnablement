@@ -4,11 +4,17 @@ public class UserDetails {
 
 	public String email;
 	
-	public String name;
+	public String userName;
 	
 	public String password;
 	
-	public String userType;
+	public String role;
+	
+	public String firstName;
+	
+	public String lastName;
+	
+	public String salt;
 
 	public String getEmail() {
 		return email;
@@ -18,12 +24,12 @@ public class UserDetails {
 		this.email = email;
 	}
 
-	public String getName() {
-		return name;
+	public String getUserName() {
+		return userName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public String getPassword() {
@@ -34,13 +40,38 @@ public class UserDetails {
 		this.password = password;
 	}
 
-	public String getUserType() {
-		return userType;
+	public String getRole() {
+		return role;
 	}
 
-	public void setUserType(String userType) {
-		this.userType = userType;
+	public void setRole(String role) {
+		this.role = role;
 	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getSalt() {
+		return salt;
+	}
+
+	public void setSalt(String salt) {
+		this.salt = salt;
+	}
+	
 	
 	
 }
